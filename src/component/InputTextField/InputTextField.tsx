@@ -5,7 +5,10 @@ export const InputTextField = () => {
     <div className="inputTextField">
       <label htmlFor="input-text">Bill</label>
       <span className="error">error occured</span>
-      <input type="text" name="username" id="input-text" />
+      <div className="inputContainer">
+        <input type="text" name="username" id="input-text" />
+        <div className="imageContainer"></div>
+      </div>
     </div>
   );
 };
