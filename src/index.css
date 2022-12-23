@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-
+@import './reset.css';
 html{
   --base-green: hsla(173, 61%, 77%, 1);
   --bg-shade: hsla(203, 50%, 97%, 1);

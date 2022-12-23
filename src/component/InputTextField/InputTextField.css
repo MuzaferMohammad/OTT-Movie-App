@@ -1,18 +1,50 @@
-.inputTextField{
-    --base-green: hsla(173, 61%, 77%, 1);
-    --bg-shade: hsla(203, 50%, 97%, 1);
-    --text-color: hsla(184, 7%, 39%, 1);
-    --error: hsla(13, 32%, 57%, 1);
-    --dark-green: hsla(183, 100%, 15%, 1);
+.inputTextField {
+    width: 540px;
+    border: 1px solid red;
 }
 
 
-.inputTextField label{
-    font-size: 1.25rem;
+.inputTextField label {
     color: var(--text-color);
 }
 
-.inputTextField input{
+.inputTextField input {
     display: block;
-    width: 100px;
+    width: 540px;
+    text-align: right;
+    background: var(--bg-shade);
+    padding: 8px 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border: none;
 }
+
+
+.inputTextField input:active {
+    outline: none;
+    border: 2px solid(--base-green);
+}
+
+.inputTextField label {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    margin-left: 12px;
+}
+
+.error {
+    margin-right: 4px;
+    margin-left: auto;
+    border: 1px solid red;
+    float: right;
+}
+
+
+
+
+
+
+
+
