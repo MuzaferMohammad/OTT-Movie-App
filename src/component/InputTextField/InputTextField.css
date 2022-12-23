@@ -1,0 +1,18 @@
+.inputTextField{
+    --base-green: hsla(173, 61%, 77%, 1);
+    --bg-shade: hsla(203, 50%, 97%, 1);
+    --text-color: hsla(184, 7%, 39%, 1);
+    --error: hsla(13, 32%, 57%, 1);
+    --dark-green: hsla(183, 100%, 15%, 1);
+}
+
+
+.inputTextField label{
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.inputTextField input{
+    display: block;
+    width: 100px;
+}

@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+html{
+  --base-green: hsla(173, 61%, 77%, 1);
+  --bg-shade: hsla(203, 50%, 97%, 1);
+  --text-color: hsla(183, 100%, 15%, 1);
+  --error: hsla(13, 32%, 57%, 1);
+  --dark-green: hsla(183, 100%, 15%, 1);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Space Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Space Mono', monospace;
 }
 
 code {
