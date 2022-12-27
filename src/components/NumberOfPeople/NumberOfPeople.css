@@ -1,14 +1,14 @@
-.inputTextField {
+.inputNumOfPeople {
     position: relative;
     width: 540px;
 }
 
 
-.inputTextField label {
+.inputNumOfPeople label {
     color: var(--text-color);
 }
 
-.inputTextField input {
+.inputNumOfPeople input {
     display: block;
     width: 540px;
     text-align: right;
@@ -22,12 +22,12 @@
 }
 
 
-.inputTextField input:active {
+.inputNumOfPeople input:active {
     outline: none;
     border: 2px solid var(--base-green);
 }
 
-.inputTextField label {
+.inputNumOfPeople label {
     display: inline-block;
     font-weight: 700;
     font-size: 1.25rem;
@@ -57,19 +57,9 @@
     left: 24px;
     width: 10px;
     height: 100%;
-    border: 1px solid red;
+   
 }
 
 .imageContainer{
     position: relative;
 }
-
-
-
-
-
-
-
-
-
-
