@@ -1,6 +1,7 @@
 .inputNumOfPeople {
     position: relative;
     width: 540px;
+    left:61px;
 }
 
 
@@ -29,11 +30,13 @@
 
 .inputNumOfPeople label {
     display: inline-block;
+    bottom:176px;
     font-weight: 700;
     font-size: 1.25rem;
     margin-bottom: 20px;
     margin-left: 0;
     color: var(--text-color);
+   
 }
 
 .error {

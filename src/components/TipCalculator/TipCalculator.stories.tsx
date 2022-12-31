@@ -1,22 +1,20 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { SelectTipAmount } from './SelectTipAmount';
+import TipCalculator from './TipCalculator';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-const meta = {
-  title: 'Example/SelectTipAmount',
-  component: SelectTipAmount,
+export default {
+  title: 'Components/ TipCalculator ',
+  component: TipCalculator,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  //   argTypes: {
-  //     backgroundColor: { control: 'color' },
-  //   },
-} as ComponentMeta<typeof SelectTipAmount>;
-export default meta;
+  argTypes: {
+    handleClick: { action: 'clicked' },
+  },
+} as ComponentMeta<typeof TipCalculator>;
+
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof SelectTipAmount> = (args) => (
-  <SelectTipAmount />
-);
+const Template: ComponentStory<typeof TipCalculator> = () => <TipCalculator />;
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

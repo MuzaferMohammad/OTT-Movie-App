@@ -1,28 +1,30 @@
+/* eslint-disable react/react-in-jsx-scope */
+
 import React from 'react';
-import './InputTextField.css';
+import './SelectTipAmount.css';
 export const SelectTipAmount = () => {
   return (
-    <div className="tip-selection">
-      <p className="label">Selected Tip %</p>
-      <div className="tip-amount">
-        <input type="radio" name="tip" value=".5" />
-        <div className="tip-btn">5%</div>
-      </div>
-      <div className="tip-amount">
-        <input type="radio" name="tip" value=".10" />
-        <div className="tip-btn">10%</div>
-      </div>
-      <div className="tip-amount">
-        <input type="radio" name="tip" value=".15" />
-        <div className="tip-btn">15%</div>
-      </div>
-      <div className="tip-amount">
-        <input type="radio" name="tip" value=".25" />
-        <div className="tip-btn">25%</div>
-      </div>
-      <div className="tip-amount">
-        <input type="radio" name="tip" value=".5" />
-        <div className="tip-btn">50%</div>
+    <div>
+      <div className="tip-selection">
+        <p className="label">Select Tip%</p>
+        <div className="tip-amt">
+          {/* <input type = "radio"  name= "tip" value= ".05" />  */}
+          <button className="tip-btn">5%</button>
+
+          {/* <input type = "radio"  name= "tip" value= ".10" /> */}
+          <button className="tip-btn">10%</button>
+
+          {/* <input type = "radio"  name= "tip" value= ".15" /> */}
+          <button className="tip-btn ">15%</button>
+        </div>
+        <div className="tip-amt">
+          {/* <input type = "radio"  name= "tip" value= ".25" /> */}
+          <button className="tip-btn">25%</button>
+
+          {/* <input type = "radio"  name= "tip" value= ".50" /> */}
+          <button className="tip-btn">50%</button>
+          <input type="number" className="tip-custom" placeholder="CUSTOM" />
+        </div>
       </div>
     </div>
   );

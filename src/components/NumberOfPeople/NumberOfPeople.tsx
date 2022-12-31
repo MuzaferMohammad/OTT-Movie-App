@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import './NumberOfPeople.css';
 export const NumberOfPeople = () => {

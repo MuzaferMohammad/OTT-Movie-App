@@ -6,6 +6,12 @@ html{
   --text-color: hsla(183, 100%, 15%, 1);
   --error: hsla(13, 32%, 57%, 1);
   --dark-green: hsla(183, 100%, 15%, 1);
+  --brand:hsla(172,67%,45%,1);
+  --neutral1:hsla(186,14%,43%,1);
+  --neutral2:hsla(184,14%,56%,1);
+  --neutral3:hsla(185,41%,84%,1);
+  --neutral4:hsla(189,41%,97%,1);
+  --white:hsla(179,41%,99%,1);
 }
 body {
   margin: 0;
