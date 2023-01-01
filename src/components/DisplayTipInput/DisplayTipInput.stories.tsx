@@ -4,7 +4,7 @@ import DisplayTipInput from './DisplayTipInput';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Example/DisplayTipInput',
+  title: 'Components/DisplayTipInput',
   component: DisplayTipInput,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   //   argTypes: {

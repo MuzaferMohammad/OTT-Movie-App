@@ -1,8 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import './DisplayTipInput.css';
-
-const DisplayTipInput = () => {
+interface TipInputDisplayInterface {
+  tipAmount: number;
+  totalTip: number;
+}
+const DisplayTipInput = ({ tipAmount, totalTip }: TipInputDisplayInterface) => {
   return (
     <div className="display-tip-input">
       <div className="display-container">
@@ -22,7 +25,10 @@ const DisplayTipInput = () => {
         </div>
       </div>
       <div className="reset-btn">
-        <button className="btn"> RESET </button>
+        <button className="btn" onClick={() => window.location.reload()}>
+          {' '}
+          RESET{' '}
+        </button>
       </div>
     </div>
   );

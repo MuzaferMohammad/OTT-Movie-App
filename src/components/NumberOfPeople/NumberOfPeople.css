@@ -1,3 +1,14 @@
+label:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    bottom: 0.5;
+    width: 20px;
+    background: url('./Vector.svg') center / contain no-repeat;
+  }
+
+
 .inputNumOfPeople {
     position: relative;
     width: 540px;
@@ -5,9 +16,9 @@
 }
 
 
-.inputNumOfPeople label {
+/* .inputNumOfPeople label {
     color: var(--text-color);
-}
+} */
 
 .inputNumOfPeople input {
     display: block;
@@ -20,6 +31,8 @@
     font-size: 1.25rem;
     border: none;
     color: var(--dark-green);
+    
+    border-radius: 6px;
 }
 
 
@@ -27,6 +40,7 @@
     outline: none;
     border: 2px solid var(--base-green);
 }
+
 
 .inputNumOfPeople label {
     display: inline-block;
@@ -47,22 +61,7 @@
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--error);
-    /* float: right; */
-}
-
-.imageContainer{
-    display: flex;
-    flex-direction: 'column';
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 24px;
-    width: 10px;
-    height: 100%;
-   
-}
-
-.imageContainer{
-    position: relative;
-}
+    letter-spacing: 0.1em;
+    font-style: normal;
+  }
+  

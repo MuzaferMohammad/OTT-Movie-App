@@ -2,7 +2,11 @@
 
 import React from 'react';
 import './SelectTipAmount.css';
-export const SelectTipAmount = () => {
+interface TipSelectionInterface {
+  Tip: string;
+  handleSelectedTip: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+const SelectTipAmount = ({ Tip, handleSelectedTip }: TipSelectionInterface) => {
   return (
     <div>
       <div className="tip-selection">
@@ -29,3 +33,4 @@ export const SelectTipAmount = () => {
     </div>
   );
 };
+export default SelectTipAmount;

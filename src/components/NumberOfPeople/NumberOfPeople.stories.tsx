@@ -5,12 +5,12 @@ import { NumberOfPeople } from './NumberOfPeople';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Example/NumberOfPeople',
+  title: 'Components/NumberOfPeople',
   component: NumberOfPeople,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  //   argTypes: {
-  //     backgroundColor: { control: 'color' },
-  //   },
+  argTypes: {
+    handleClick: { action: 'clicked' },
+  },
 } as ComponentMeta<typeof NumberOfPeople>;
 export default meta;
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

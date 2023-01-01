@@ -5,12 +5,12 @@ import { InputTextField } from './InputTextField';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Example/InputTextField',
-  component: InputTextField,
+  title: 'Components/InputTextField',
+  components: InputTextField,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  //   argTypes: {
-  //     backgroundColor: { control: 'color' },
-  //   },
+  argTypes: {
+    handleClick: { action: 'clicked' },
+  },
 } as ComponentMeta<typeof InputTextField>;
 export default meta;
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

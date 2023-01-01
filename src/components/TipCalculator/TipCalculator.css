@@ -7,3 +7,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .tip-display{
+    display: flex;
+  }

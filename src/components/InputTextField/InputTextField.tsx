@@ -1,15 +1,23 @@
-/* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import './InputTextField.css';
-export const InputTextField = () => {
+interface InputTextFieldInterface {
+  Bill: string;
+  handleBillInput: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+export const InputTextField = ({
+  Bill,
+  handleBillInput,
+}: InputTextFieldInterface) => {
   return (
     <div className="inputTextField">
-      <label htmlFor="input-text">Bill</label>
+      <label>Bill</label>
       <span className="error">error occured</span>
-      <div className="inputContainer">
-        <input type="text" name="username" id="input-text" />
-        <div className="imageContainer"></div>
-      </div>
+      <input
+        type="number"
+        id="input-text"
+        onInput={handleBillInput}
+        value={Bill}
+      />
     </div>
   );
 };
