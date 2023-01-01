@@ -10,7 +10,7 @@ const SelectTipAmount = ({ Tip, handleSelectedTip }: TipSelectionInterface) => {
   return (
     <div>
       <div className="tip-selection">
-        <p className="label">Select Tip%</p>
+        <p className="select-tip">Select Tip%</p>
         <div className="tip-amt">
           {/* <input type = "radio"  name= "tip" value= ".05" />  */}
           <button className="tip-btn">5%</button>

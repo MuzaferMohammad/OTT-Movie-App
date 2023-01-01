@@ -65,3 +65,12 @@ label:before {
     font-style: normal;
   }
   
+  label::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50px;
+    bottom: 0;
+    width: 20px;
+    background: url('./Vector.svg') center / contain no-repeat;
+  }

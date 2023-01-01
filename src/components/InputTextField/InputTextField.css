@@ -63,12 +63,13 @@
   position: relative;
 }
 
-label::before {
+  
+.label::before {
   content: '';
   position: absolute;
   left: 10px;
   top: 50px;
   bottom: 0;
   width: 20px;
-  background: url('\$ (2).svg') center / contain no-repeat;
+  background: url('./dollor.svg') center / contain no-repeat;
 }
