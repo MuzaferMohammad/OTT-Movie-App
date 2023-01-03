@@ -1,22 +1,19 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { NumberOfPeople } from './NumberOfPeople';
+import DisplayTip from './DisplayTip';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Components/NumberOfPeople',
-  component: NumberOfPeople,
+  title: 'Components/DisplayTip',
+  component: DisplayTip,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    handleClick: { action: 'clicked' },
-  },
-} as ComponentMeta<typeof NumberOfPeople>;
+  //   argTypes: {
+  //     backgroundColor: { control: 'color' },
+  //   },
+} as ComponentMeta<typeof DisplayTip>;
 export default meta;
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof NumberOfPeople> = (args) => (
-  <NumberOfPeople />
-);
+const Template: ComponentStory<typeof DisplayTip> = (args) => <DisplayTip />;
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

@@ -1,11 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import './DisplayTipInput.css';
-interface TipInputDisplayInterface {
-  tipAmount: number;
-  totalTip: number;
-}
-const DisplayTipInput = ({ tipAmount, totalTip }: TipInputDisplayInterface) => {
+import './DisplayTip.css';
+// interface TipInputDisplayInterface {
+//   tipAmount: number;
+//   totalTip: number;
+// }
+const DisplayTip = () => {
   return (
     <div className="display-tip-input">
       <div className="display-container">
@@ -34,4 +34,4 @@ const DisplayTipInput = ({ tipAmount, totalTip }: TipInputDisplayInterface) => {
   );
 };
 
-export default DisplayTipInput;
+export default DisplayTip;
