@@ -19,12 +19,16 @@ const Template: ComponentStory<typeof InputTextField> = (args) => {
   const [inputText, setInputText] = React.useState('');
 
   function handleInputText(event: React.ChangeEvent<HTMLInputElement>) {
-    setInputText(event.target.value);
+    const regexForPeople = /^[0-9]+$/;
+    if (event.target.value === '' || regexForPeople.test(event.target.value)) {
+      setInputText(event.target.value);
+    }
   }
 
   function checkForError() {
-    return inputText === '0' ? 'cannot be zero' : null;
+    return inputText === '0' ? 'can not be zero' : null;
   }
+
   return (
     <InputTextField
       {...args}
@@ -53,7 +57,7 @@ export const showBillAmtError = Template.bind({});
 showBillAmtError.args = {
   label: 'Bill',
   icon: <img src={dollor} />,
-  error: 'Error occured',
+  error: 'Can not be zero',
 };
 
 // eslint-disable-next-line storybook/prefer-pascal-case
@@ -62,5 +66,5 @@ showError.args = {
   label: 'Number of People',
   icon: <img src={person} />,
   inputText: '0',
-  error: 'Error occured',
+  error: 'Can not be zero',
 };

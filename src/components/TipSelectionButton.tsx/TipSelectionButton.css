@@ -1,0 +1,22 @@
+.tip-selection {
+    display: grid;
+    justify-content: start;
+    padding:125px 61px;
+}
+
+.select-tip{
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 15px 5px;
+  }
+
+.Tip-amt {
+    position: relative;
+  }
+
+  .tip-row{
+    display:flex;
+    flex-direction:row;
+}

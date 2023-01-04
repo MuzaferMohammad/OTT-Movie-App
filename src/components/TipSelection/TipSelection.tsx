@@ -1,13 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import './TipSelection.css';
-
 interface TipSelectionInterface {
   tip: string;
   label: string;
   handleSelectedTip: (value: string) => void;
 }
-
 const TipSelection = ({
   tip,
   label,
@@ -16,6 +14,7 @@ const TipSelection = ({
   return (
     <div>
       <div className="Tip-selection">
+        {/* <p className="label">Select Tip%</p>  */}
         <div className="Tip-amt">
           <button
             className="Tip-btn"
@@ -24,6 +23,7 @@ const TipSelection = ({
           >
             {label}
           </button>
+          {/* <p>{tip}</p> */}
         </div>
       </div>
     </div>
