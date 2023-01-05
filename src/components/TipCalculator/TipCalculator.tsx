@@ -28,24 +28,12 @@ const TipCalculator = () => {
   //    setTotalTip(tipAmount + bill)
   //   }
 
-  // // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // function handleBillInput(e: React.ChangeEvent<HTMLInputElement>) {
-  //   setBill(e.target.value);
-  // }
-
-  // // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // function handleSelectedTip(e: React.ChangeEvent<HTMLInputElement>) {
-  //   setTip(e.target.value);
-  // }
-  // function handlePeople(e: React.ChangeEvent<HTMLInputElement>) {
-  //   setPeople(e.target.value);
-  //   // console.log(e.target.value)
-  // }
   const [bill, setBill] = React.useState('');
   const [people, setPeople] = React.useState('');
   const [tip, setTip] = React.useState('');
   const [calculatedTip, setCalculatedTip] = React.useState(0);
   const [total, setTotal] = React.useState(0);
+
   // const [tipAmount, setTipAmount] = React.useState(0);
   // const [totalTip, setTotalTip] = React.useState(0);
 
@@ -96,6 +84,13 @@ const TipCalculator = () => {
   function handleSelectedTip(value: string) {
     console.log(setTip(value));
   }
+
+  // function handleCalculatedTip(e: React.ChangeEvent<HTMLInputElement>) {
+  //     setCalculatedTip(e.target.value);
+  //     // console.log(e.target.value)
+  // }
+  // function handleTotalTip(e: React.ChangeEvent<HTMLInputElement>) {
+  //   setTotal(e.target.value);
 
   return (
     <div className="Tip-calculator">
