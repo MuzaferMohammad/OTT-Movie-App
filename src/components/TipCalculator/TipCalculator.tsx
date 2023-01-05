@@ -12,53 +12,33 @@ import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const TipCalculator = () => {
-  // const [bill, setBill] = React.useState('');
-  // const [people, setPeople] = React.useState('');
-  // const [tip, setTip] = React.useState('');
-
-  //  const [isTipSelected, setIsTipSelected] = React.useState(false);
-
-  // useEffect(() => {
-  //   console.log({ bill, people, tip });
-  // }, [bill, people, tip]);
-
-  // function calculateTipAmount() {
-  //   if(bill > 0 && people > 0 && tip > 0){
-  //    setTipAmount(bill * (tip /100));
-  //    setTotalTip(tipAmount + bill)
-  //   }
-
   const [bill, setBill] = React.useState('');
   const [people, setPeople] = React.useState('');
   const [tip, setTip] = React.useState('');
-  const [calculatedTip, setCalculatedTip] = React.useState(0);
-  const [total, setTotal] = React.useState(0);
+  const [customValue, setCustom] = React.useState('');
 
-  // const [tipAmount, setTipAmount] = React.useState(0);
-  // const [totalTip, setTotalTip] = React.useState(0);
+  function handleSelectedTip(value: string) {
+    setTip(value);
+  }
+
+  function handleCustomInput(e: React.ChangeEvent<HTMLInputElement>) {
+    const regexForCustom = /^[0-9]+$/;
+    if (e.target.value === '' || regexForCustom.test(e.target.value)) {
+      setCustom(e.target.value);
+    }
+  }
+  // console.log(tip);
 
   const inputTextBill = parseInt(bill, 10);
   const inputTextPeople = parseInt(people, 10);
   const tipIntNum = parseInt(tip, 10);
-  // useEffect(() => {
-  //   console.log({ inputTextBill, inputTextPeople, tipIntNum });
-  // }, [inputTextBill, inputTextPeople, tipIntNum]);
 
   useEffect(() => {
     console.log({ inputTextBill, inputTextPeople, tipIntNum });
   }, [inputTextBill, inputTextPeople, tipIntNum]);
-  // function calculateTipAmount() {
-  //   if (billInt > 0 && peopleInt > 0 && tipInt > 0) {
-  //     setTipAmount(billInt * (tipInt / 100));
-  //     setTotalTip(TipAmount + billInt);
-  //   }
-  // }
-  function calculateTipAmount() {
-    if (inputTextBill > 0 && inputTextPeople > 0 && tipIntNum > 0) {
-      setCalculatedTip(inputTextBill * (tipIntNum / 100));
-      setTotal(calculatedTip + inputTextBill);
-    }
-  }
+
+  const calculatedTip = (inputTextBill * (tipIntNum / 100)) / inputTextPeople;
+  const total = inputTextBill / inputTextPeople + calculatedTip;
 
   function checkForErrorInBill() {
     return bill === '0' ? 'can not be zero' : null;
@@ -81,17 +61,6 @@ const TipCalculator = () => {
     }
   }
 
-  function handleSelectedTip(value: string) {
-    console.log(setTip(value));
-  }
-
-  // function handleCalculatedTip(e: React.ChangeEvent<HTMLInputElement>) {
-  //     setCalculatedTip(e.target.value);
-  //     // console.log(e.target.value)
-  // }
-  // function handleTotalTip(e: React.ChangeEvent<HTMLInputElement>) {
-  //   setTotal(e.target.value);
-
   return (
     <div className="Tip-calculator">
       <div>
@@ -103,10 +72,12 @@ const TipCalculator = () => {
           handleText={handleInputTextForBill}
         />
         <TipSelectionButton
-        //  tip={tip}
-        //  handleSelectedTip={ handleSelectedTip}
+          handleSelectedTip={handleSelectedTip}
+          handleCustomInput={handleCustomInput}
+          customValue={customValue}
+          tip={tip}
         />
-        <p>{tip}</p>
+
         <InputTextField
           label={'Number Of People'}
           icon={<img src={person} />}
@@ -115,11 +86,7 @@ const TipCalculator = () => {
           handleText={handleInputTextForPeople}
         />
       </div>
-      <DisplayTip
-      //  total={total}
-      //  people={people}
-      //  calculatedTipAmount={calculatedTipAmount()}
-      />
+      <DisplayTip tipAmount={calculatedTip} totalTip={total} />
     </div>
   );
 };

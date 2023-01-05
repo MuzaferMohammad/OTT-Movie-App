@@ -4,22 +4,18 @@ import CustomButton from '../CustomButton/CustomButton';
 import TipSelection from '../TipSelection/TipSelection';
 import '../TipSelection/TipSelection.css';
 import './TipSelectionButton.css';
-
-const TipSelectionButton = () => {
-  const [customValue, setCustom] = React.useState('');
-  const [tip, setTip] = React.useState('');
-
-  function handleSelectedTip(value: string) {
-    setTip(value);
-  }
-
-  function handleCustomInput(e: React.ChangeEvent<HTMLInputElement>) {
-    const regexForCustom = /^[0-9]+$/;
-    if (e.target.value === '' || regexForCustom.test(e.target.value)) {
-      setCustom(e.target.value);
-    }
-  }
-
+interface TipSelectionButtonInterface {
+  customValue: string;
+  tip: string;
+  handleSelectedTip: (value: string) => void;
+  handleCustomInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+const TipSelectionButton = ({
+  customValue,
+  tip,
+  handleSelectedTip,
+  handleCustomInput,
+}: TipSelectionButtonInterface) => {
   // function handleCustomInput(custom: any): void {
   //   throw new Error('Function not implemented.');
   // }
@@ -62,7 +58,6 @@ const TipSelectionButton = () => {
             customValue={customValue}
             handleCustomInput={handleCustomInput}
           />
-          <p>{customValue}</p>
         </div>
       </div>
     </div>

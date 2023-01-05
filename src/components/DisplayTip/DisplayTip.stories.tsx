@@ -13,7 +13,9 @@ const meta = {
 } as ComponentMeta<typeof DisplayTip>;
 export default meta;
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof DisplayTip> = (args) => <DisplayTip />;
+const Template: ComponentStory<typeof DisplayTip> = (args) => (
+  <DisplayTip {...args} />
+);
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const DisplayDefault = Template.bind({});
