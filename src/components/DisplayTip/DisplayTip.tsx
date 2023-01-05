@@ -5,7 +5,10 @@ import './DisplayTip.css';
 //   tipAmount: number;
 //   totalTip: number;
 // }
+// const DisplayTip = ({ calculatedTip, total, people }) => {}
 const DisplayTip = () => {
+  // const returnCurrencyAmt = (amt:number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amt);
+
   return (
     <div className="display-tip-input">
       <div className="display-container">
@@ -14,14 +17,16 @@ const DisplayTip = () => {
             <p className="header">Tip Amount</p>
             <p className="unit">/ person</p>
           </div>
-          <p className="display-amt">$0.00</p>
+          <p className="display-amt">$3.14</p>
+          {/* {returnCurrencyAmt(`${calculatedTip ? calculatedTip/people : "0"}`)} */}
         </div>
         <div className="display-row">
           <div className="display-label">
             <p className="header">Total</p>
             <p className="unit">/ person</p>
           </div>
-          <p className="display-amt">$0.00</p>
+          <p className="display-amt">$11.2</p>
+          {/* {returnCurrencyAmt(`${total ? total/people : "0"}`)} */}
         </div>
       </div>
       <div className="reset-btn">

@@ -7,8 +7,10 @@ import './TipSelectionButton.css';
 
 const TipSelectionButton = () => {
   const [customValue, setCustom] = React.useState('');
-  function handleSelectedTip(tip: number) {
-    return console.log(tip);
+  const [tip, setTip] = React.useState('');
+
+  function handleSelectedTip(value: string) {
+    setTip(value);
   }
 
   function handleCustomInput(e: React.ChangeEvent<HTMLInputElement>) {
@@ -28,37 +30,39 @@ const TipSelectionButton = () => {
         <p className="select-tip">Select Tip%</p>
         <div className="tip-row">
           <TipSelection
-            tip="5"
-            handleSelectedTip={() => handleSelectedTip(5)}
+            tip={tip}
+            handleSelectedTip={() => handleSelectedTip('5')}
             label="5%"
           />
           <TipSelection
-            tip="10"
-            handleSelectedTip={() => handleSelectedTip(10)}
+            tip={tip}
+            handleSelectedTip={() => handleSelectedTip('10')}
             label="10%"
           />
 
           <TipSelection
-            tip="15"
-            handleSelectedTip={() => handleSelectedTip(15)}
+            tip={tip}
+            handleSelectedTip={() => handleSelectedTip('15')}
             label="15%"
           />
         </div>
         <div className="tip-row">
           <TipSelection
-            tip="25"
-            handleSelectedTip={() => handleSelectedTip(25)}
+            tip={tip}
+            handleSelectedTip={() => handleSelectedTip('25')}
             label="25%"
           />
           <TipSelection
-            tip="50"
-            handleSelectedTip={() => handleSelectedTip(50)}
+            tip={tip}
+            handleSelectedTip={() => handleSelectedTip('50')}
             label="50%"
           />
+          <p>{tip}</p>
           <CustomButton
             customValue={customValue}
             handleCustomInput={handleCustomInput}
           />
+          <p>{customValue}</p>
         </div>
       </div>
     </div>
