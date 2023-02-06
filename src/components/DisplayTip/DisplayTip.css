@@ -4,15 +4,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 566px;
+    width: 600px;
     height: 575px;
     border: 3px solid green;
-    position: absolute;   
-    left: 653px;
-    top: 61px;
+    position: relative;
+    margin-left:575px;
   }
- 
-
+  
   .display-container {
     display: grid;
     padding: 60px 56px;
@@ -34,17 +32,15 @@
   .header {
     color: var(--bg-shade);
     font-size: 20px;
-
   }
   .unit {
     color: var(--base-green);
     font-size: 20px;
-
   }
   .display-amt {
     font-size: 48px;
     color: var(--base-green);
-    width: 147px;
+    width: 240px;
     height: 71px;
     left: 1016px;
     top: 117px;
@@ -67,7 +63,7 @@
     left: 709px;
     top: 518px;
     align-items: center;
-    color:var(--dark-green)
+    color: var(--dark-green);
   }
   
   .reset-btn {
@@ -75,9 +71,15 @@
     position: absolute;
     align-self: center;
     top: 75%;
- 
   }
   
   .btn:focus {
     outline: none;
+    background-color: #0d686d;
+    color: #00474b;
   }
+
+  .btn:disabled {
+    background-color: hsla(183, 79%, 24%, 1);
+  }
+  

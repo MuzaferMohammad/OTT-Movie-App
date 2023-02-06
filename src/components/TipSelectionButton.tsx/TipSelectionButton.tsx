@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
-import CustomButton from '../CustomButton/CustomButton';
+// import CustomButton from '../CustomButton/CustomButton';
 import TipSelection from '../TipSelection/TipSelection';
 import '../TipSelection/TipSelection.css';
 import './TipSelectionButton.css';
@@ -53,10 +53,11 @@ const TipSelectionButton = ({
             handleSelectedTip={() => handleSelectedTip('50')}
             label="50%"
           />
-          <p>{tip}</p>
-          <CustomButton
-            customValue={customValue}
-            handleCustomInput={handleCustomInput}
+          <input
+            type="text"
+            className="tip-custom"
+            placeholder="Custom"
+            onChange={(e) => handleSelectedTip(e.target.value)}
           />
         </div>
       </div>

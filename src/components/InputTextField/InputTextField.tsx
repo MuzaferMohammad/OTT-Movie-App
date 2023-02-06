@@ -8,6 +8,7 @@ interface InputTextFieldInterface {
   inputText?: string;
   handleText?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
+
 export const InputTextField = ({
   label,
   icon,

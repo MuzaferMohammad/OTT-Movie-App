@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import CustomButton from './CustomButton';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+
 export default {
   title: 'Components/customButton',
   component: CustomButton,

@@ -1,14 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/react-in-jsx-scope */
 import { InputTextField } from '../InputTextField/InputTextField';
-import TipSelection from '../TipSelection/TipSelection';
 import TipSelectionButton from '../TipSelectionButton.tsx/TipSelectionButton';
 import DisplayTip from '../DisplayTip/DisplayTip';
 import './TipCalculator.css';
 import React, { useEffect } from 'react';
-import dollor from '../../../assets/dollor.svg';
-import person from '../../../assets/person.svg';
-import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
+import dollar from '../../assets/dollor.svg';
+import person from '../../assets/person.svg';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const TipCalculator = () => {
@@ -16,22 +14,23 @@ const TipCalculator = () => {
   const [people, setPeople] = React.useState('');
   const [tip, setTip] = React.useState('');
   const [customValue, setCustom] = React.useState('');
+  const [tipAmount, setTipAmount] = React.useState(0);
+  const [totalTip, setTotalTip] = React.useState(0);
 
   function handleSelectedTip(value: string) {
     setTip(value);
   }
 
   function handleCustomInput(e: React.ChangeEvent<HTMLInputElement>) {
-    const regexForCustom = /^[0-9]+$/;
+    const regexForCustom = /^\d*\.?\d*$/;
     if (e.target.value === '' || regexForCustom.test(e.target.value)) {
       setCustom(e.target.value);
     }
   }
-  // console.log(tip);
 
-  const inputTextBill = parseInt(bill, 10);
+  const inputTextBill = parseFloat(bill);
   const inputTextPeople = parseInt(people, 10);
-  const tipIntNum = parseInt(tip, 10);
+  const tipIntNum = parseFloat(tip);
 
   useEffect(() => {
     console.log({ inputTextBill, inputTextPeople, tipIntNum });
@@ -43,15 +42,18 @@ const TipCalculator = () => {
   function checkForErrorInBill() {
     return bill === '0' ? 'can not be zero' : null;
   }
+
   function handleInputTextForBill(event: React.ChangeEvent<HTMLInputElement>) {
-    const regexForBill = /^[0-9]+$/;
+    const regexForBill = /^\d*\.?\d*$/;
     if (event.target.value === '' || regexForBill.test(event.target.value)) {
       setBill(event.target.value);
     }
   }
+
   function checkForErrorInPeople() {
     return people === '0' ? 'can not be zero' : null;
   }
+
   function handleInputTextForPeople(
     event: React.ChangeEvent<HTMLInputElement>,
   ) {
@@ -61,12 +63,21 @@ const TipCalculator = () => {
     }
   }
 
+  function handleResetBtn() {
+    setBill('');
+    setPeople('');
+    setTip('');
+    setCustom('');
+    setTipAmount(0);
+    setTotalTip(0);
+  }
+
   return (
-    <div className="Tip-calculator">
-      <div>
+    <div className="tip-calculator">
+      <div className="input-container">
         <InputTextField
           label={'Bill'}
-          icon={<img src={dollor} />}
+          icon={<img src={dollar} />}
           inputText={bill}
           error={checkForErrorInBill()}
           handleText={handleInputTextForBill}
@@ -86,7 +97,13 @@ const TipCalculator = () => {
           handleText={handleInputTextForPeople}
         />
       </div>
-      <DisplayTip tipAmount={calculatedTip} totalTip={total} />
+      <div className="display-tip-container">
+        <DisplayTip
+          tipAmount={calculatedTip}
+          totalTip={total}
+          handleResetBtn={handleResetBtn}
+        />
+      </div>
     </div>
   );
 };

@@ -17,7 +17,6 @@ const CustomButton = ({ customValue, handleCustomInput }: customInterface) => {
           placeholder="Custom"
         />
       </div>
-      {/* <p>{customValue}</p> */}
     </div>
   );
 };

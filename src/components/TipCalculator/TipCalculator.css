@@ -1,17 +1,42 @@
-.TipCalculator {
+.tip-calculator {
+  display: flex;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  top: 66px;
+  width: 50%;
+  justify-content: space-between;
+  position: absolute;
+}
+
+.display-tip-container {
+  display: grid;
+  padding: 0px 60px 0px 56px;
+  width: 40%;
+}
+
+/* css for mobile view */
+@media (max-width: 420px) {
+  /* main container that contains all the components*/
+  .tip-calculator {
     display: flex;
-  }
-  
-  .TipCalculator-container {
-    display: flex;
+    padding: 0;
     flex-direction: column;
-    align-items: flex-start;
   }
 
-  .tip-display{
-    display: flex;
+  /* container for the components that take user inputs */
+  .input-container {
+    width: 80%;
+    padding: 30px;
   }
 
-
-
-  
+  /* container that displays tip amount and total bill per person */
+  .display-tip-container {
+    padding: 30px;
+    width: 85%;
+  }
+}
