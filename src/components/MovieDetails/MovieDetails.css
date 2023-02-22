@@ -1,0 +1,47 @@
+.moviedetail-container {
+  display: flex;
+}
+
+.movie-poster-container {
+  gap: 0px;
+  position: absolute;
+  top: 160px;
+  left: 130px;
+  margin: 0 auto;
+}
+
+.movie-poster-container img {
+   width: 100px;
+   height: 100px;
+  }
+
+.description-container-title {
+  position: absolute;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 72px;
+}
+
+.movie-description {
+  position: absolute;
+  color: #ffffff;
+  width: 550px;
+  margin-top: 130px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  top: 160px;
+  position: absolute;
+  left: 450px;
+  width: 400px;
+}
+
+.synopsis {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-top: 90px;
+}

@@ -1,17 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import dollor from '../../../assets/dollor.svg';
-import person from '../../../assets/person.svg';
 import { InputTextField } from './InputTextField';
+import './InputTextField.css';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   title: 'Components/InputTextField',
   component: InputTextField,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  //   argTypes: {
-  //     backgroundColor: { control: 'color' },
-  //   },
 } as ComponentMeta<typeof InputTextField>;
 export default meta;
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -25,46 +20,45 @@ const Template: ComponentStory<typeof InputTextField> = (args) => {
     }
   }
 
-  function checkForError() {
-    return inputText === '0' ? 'can not be zero' : null;
-  }
+  // function checkForError() {
+  //   return inputText === '0' ? 'can not be zero' : null;
+  // }
 
   return (
     <InputTextField
       {...args}
       inputText={inputText}
-      error={checkForError()}
       handleText={handleInputText}
     />
   );
 };
 
-export const InputBill = Template.bind({});
+export const InputEmail = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-InputBill.args = {
-  label: 'Bill',
-  icon: <img src={dollor} />,
+InputEmail.args = {
+  label: 'Email',
+  placeholder: 'Email',
+  className: 'input-field',
 };
 
-export const InputNumberOfPeople = Template.bind({});
-InputNumberOfPeople.args = {
-  label: 'Number of People',
-  icon: <img src={person} />,
+export const InputPassword = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+InputPassword.args = {
+  label: 'Password',
+  placeholder: 'Password',
+  className: 'input-field',
 };
 
-// eslint-disable-next-line storybook/prefer-pascal-case
-export const showBillAmtError = Template.bind({});
-showBillAmtError.args = {
-  label: 'Bill',
-  icon: <img src={dollor} />,
-  error: 'Can not be zero',
-};
+// export const InputFullName = Template.bind({});
+// // More on args: https://storybook.js.org/docs/react/writing-stories/args
+// InputFullName.args = {
+//   label: 'Full Name',
+//   placeholder: 'Full Name'
+// };
 
-// eslint-disable-next-line storybook/prefer-pascal-case
-export const showError = Template.bind({});
-showError.args = {
-  label: 'Number of People',
-  icon: <img src={person} />,
-  inputText: '0',
-  error: 'Can not be zero',
-};
+// export const InputConfirmPassword = Template.bind({});
+// // More on args: https://storybook.js.org/docs/react/writing-stories/args
+// InputConfirmPassword.args = {
+//   label: 'Confirm Password',
+//   placeholder: 'Confirm Password'
+// };

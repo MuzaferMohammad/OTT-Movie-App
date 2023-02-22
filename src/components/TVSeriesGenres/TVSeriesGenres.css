@@ -1,0 +1,29 @@
+.genre-container {
+    display: grid;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    right: 5%;
+    margin-left: 10%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .tv-genre-1 {
+    background: #0f766e;
+    border-radius: 16px;
+    padding: 75px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .genre-2 {
+    background: #171e31;
+    border-radius: 16px;
+    padding: 75px;
+    color: #fff;
+    text-decoration: none;
+  }
+  

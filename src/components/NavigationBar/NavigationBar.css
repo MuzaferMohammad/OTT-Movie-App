@@ -1,0 +1,23 @@
+.nav-bar-container {
+    display: flex;
+    width: 7%;
+    height: 897px;
+    background: #171e31;
+    border-radius: 16px;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .nav-bar-dashboard {
+      margin-top: 40%;
+      margin-bottom: 30%;
+  }
+  
+  .nav-bar-logo{
+      margin-top: 40%;
+      margin-bottom: 80%;
+  }
+  
+  .nav-bar-profile{
+      margin-bottom: 50%;
+  }

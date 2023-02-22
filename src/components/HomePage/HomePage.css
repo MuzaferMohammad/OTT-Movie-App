@@ -1,0 +1,97 @@
+.homepage-container {
+  background: #10141e;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 2% 3% 2% 2%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* .navigation-bar-home {
+  
+  } */
+
+.search-bar-container-home {
+  width: 100%;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.trending-text {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 60px;
+  color: #ffffff;
+}
+
+.movie-box {
+  display: flex;
+  box-sizing: border-box;
+  width: 80px;
+  height: 32px;
+  border: 2px solid #f0e6e6;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+.movie-box p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.07em;
+  color: #ffffff;
+  justify-content: center;
+}
+
+.trending-container {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  top: 18%;
+  left: 13%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.movie-tray-container {
+  top: 27%;
+  position: absolute;
+  left: 13%;
+  width: 80%;
+}
+
+.popularmovie-section h1 {
+  font-size: 30px;
+  line-height: 60px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-left: 60px;
+  position: absolute;
+  top: 480px;
+  left: 80px;
+}
+
+.popular-moviecard-container {
+  gap: 20px;
+  margin-left: 10%;
+  position: absolute;
+  top: 550px;
+  left: 13%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.popular-movie-container {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  top: 65%;
+  left: 13%;
+  text-align: center;
+  margin: 0 auto;
+}

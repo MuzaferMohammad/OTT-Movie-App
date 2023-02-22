@@ -2,35 +2,36 @@ import React from 'react';
 import './InputTextField.css';
 
 interface InputTextFieldInterface {
+  backgroundColor?: string;
   label?: string;
-  error: string | null;
-  icon?: JSX.Element;
+  className?: string;
   inputText?: string;
   handleText?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  error?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const InputTextField = ({
   label,
-  icon,
-  error,
   inputText,
   handleText,
+  backgroundColor,
+  className,
+  placeholder,
+  error,
 }: InputTextFieldInterface) => {
-  const errorClasses =
-    error !== null ? 'inputTextField errorClasses' : 'inputTextField';
   return (
     <div className="inputTextField">
       <label>{label}</label>
-      <span className="error">{error}</span>
-      <div className={errorClasses}>
-        <input
-          type="text"
-          id="input-text"
-          value={inputText}
-          onChange={handleText}
-        />
-        <div className="imageContainer">{icon}</div>
-      </div>
+      <input
+        className={className}
+        type="text"
+        id="input-text"
+        value={inputText}
+        style={{ backgroundColor }}
+        onChange={handleText}
+        placeholder={placeholder}
+      />
     </div>
   );
 };

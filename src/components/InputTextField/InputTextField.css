@@ -1,76 +1,20 @@
 .inputTextField {
-  display: absolute;
-  position: relative;
-  width: 540px;
-}
-
-.inputTextField input {
-  display: block;
-  width: 540px;
-  text-align: right;
-  background: var(--bg-shade);
-  padding: 8px 20px;
-  font-size: 2rem;
-  font-weight: 700;
-  font-size: 1.25rem;
-  border: none;
-  color: var(--dark-green);
-}
-
-.inputTextField input:focus {
-  outline: none;
-  border: 2px solid var(--base-green);
-}
-
-.inputTextField label {
-  color: var(--text-color);
-  display: inline-block;
-  font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 12px;
-  margin-left: 0px;
-}
-
-.imageContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 24px;
-  height: 100%;
-}
-
-.inputContainer{
-  position: relative;
-}
-
-.inputNumberOfPeople {
-    /* position: relative;
-    width: 540px; */
-    position: absolute;
-    height: 30px;
-    left: 7px;
-    top: 425px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.1em;
+    height: 72px;
+    margin-bottom: 48px;
   }
   
-  .inputNumberOfPeople input {
-    display: block;
-    width: 540px;
-    text-align: right;
-    background: var(--bg-shade);
-    padding: 8px 20px;
-    font-size: 2rem;
-    font-weight: 700;
-    font-size: 1.25rem;
-    border: none;
-    color: var(--dark-green);
+  .inputTextField label {
+    width: 44px;
+    height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  
+  /* .inputContainer {
+    position: relative;
   }
   
   .inputNumberOfPeople input:focus {
@@ -88,7 +32,7 @@
     margin-left: 0px;
   }
   
-  .imageContainer{
+  .imageContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +52,8 @@
     font-weight: 700;
     color: var(--error);
   }
-
-  .errorClasses input:focus{
+  
+  .errorClasses input:focus {
     border-color: var(--error);
-  }
+  } */
+  
