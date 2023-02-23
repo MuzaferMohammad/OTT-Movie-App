@@ -54,10 +54,10 @@ export const MovieGenres = () => {
         <a href="" className="genre-2">
           Music
         </a>
-        <a href="" className="genre-1"></a>
+        {/* <a href="" className="genre-1"></a>
         <a href="" className="genre-2"></a>
         <a href="" className="genre-1"></a>
-        <a href="" className="genre-2"></a>
+        <a href="" className="genre-2"></a> */}
       </div>
     </div>
   );

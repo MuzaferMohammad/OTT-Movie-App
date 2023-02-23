@@ -51,3 +51,7 @@ code {
   border: none;
   border-radius: 8px;
 }
+
+.search-button:disabled {
+  opacity: 0.5;
+}

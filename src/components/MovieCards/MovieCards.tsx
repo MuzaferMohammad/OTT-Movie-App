@@ -1,9 +1,8 @@
 import React from 'react';
 import './MovieCards.css';
 import MovieCardIcon from './MovieCardIcon.svg';
-import BookmarkIcon from './BookmarkIcon.svg';
 // import BGcircle from './BGcircle.svg';
-// import dotIcon from './dotIcon.svg';
+import dotIcon from './dotIcon.svg';
 
 interface MovieCardInterface {
   poster?: string;
@@ -17,6 +16,7 @@ interface MovieCardInterface {
   isBookmarked?: boolean;
   isTrending?: boolean;
   className?: string;
+  BookmarkIcon?: string;
 }
 
 export const MovieCards = ({
@@ -24,18 +24,26 @@ export const MovieCards = ({
   year,
   category,
   title,
+  BookmarkIcon,
 }: MovieCardInterface) => {
+  function handleBookmarkIconClick() {
+    alert('Saved to Bookmark');
+  }
+
   return (
     <div className="movie-cards">
       <a href="">
         <img src={poster} alt="poster" className="poster" />
       </a>
-      <button className="movieCard-container__button">
+      <button
+        className="movieCard-container__bookmark__button"
+        onClick={handleBookmarkIconClick}
+      >
         <object className="movieCard-container__icon" data={BookmarkIcon} />
       </button>
       <div className="movie-data">
         <p>{year}</p>
-        {/* <img src={dotIcon} alt="" className='dot-icon' /> */}
+        <object data={dotIcon} type="" className="dot-icon"></object>
         <object
           data={MovieCardIcon}
           type=""

@@ -12,22 +12,22 @@ export const NavigationBar = () => {
   return (
     <div className="nav-bar-container">
       <div className="nav-bar-logo">
-        <object data={logo}></object>
+        <img src={logo} />
       </div>
-      <a href="" className="nav-bar-dashboard">
-        <object data={Dashboard} className="icon1"></object>
+      <a href="home" className="nav-bar-dashboard">
+        <img src={Dashboard} className="icon1" />
       </a>{' '}
-      <a href="" className="nav-bar-dashboard">
-        <object data={Movie}></object>
+      <a href="movie-genres" className="nav-bar-dashboard">
+        <img src={Movie} />
       </a>{' '}
-      <a href="" className="nav-bar-dashboard">
-        <object data={TVSeries}></object>
+      <a href="tv-series-genres" className="nav-bar-dashboard">
+        <img src={TVSeries} />
       </a>{' '}
-      <a href="" className="nav-bar-dashboard">
-        <object data={Bookmark}></object>
+      <a href="bookmarks" className="nav-bar-dashboard">
+        <img src={Bookmark} />
       </a>
-      <a href="" className="nav-bar-profile">
-        <object data={Profile}></object>
+      <a href="/" className="nav-bar-profile">
+        <img src={Profile} />
       </a>
     </div>
   );

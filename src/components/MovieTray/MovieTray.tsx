@@ -3,6 +3,7 @@ import { data } from '../../MovieData';
 import './MovieTray.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import BookmarkIcon from '../MovieCards/BookmarkIcon.svg';
 import { MovieCard } from '../MovieCards/MovieCards.stories';
 
 export const MovieTray = () => {
@@ -17,6 +18,7 @@ export const MovieTray = () => {
               category={movie.category}
               title={movie.title}
               rating={movie.rating}
+              BookmarkIcon={BookmarkIcon}
             />
           </div>
         ))}

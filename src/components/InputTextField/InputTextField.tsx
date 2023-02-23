@@ -31,6 +31,7 @@ export const InputTextField = ({
         style={{ backgroundColor }}
         onChange={handleText}
         placeholder={placeholder}
+        autoComplete="off"
       />
     </div>
   );

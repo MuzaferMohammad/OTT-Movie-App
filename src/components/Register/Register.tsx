@@ -55,6 +55,10 @@ export const RegisterPage = ({ label, placeholder }: SignInPageInterface) => {
     }
   }
 
+  function handleRegisterClick() {
+    alert('Registered');
+  }
+
   return (
     <div className="register-page">
       <div className="register-container">
@@ -105,6 +109,7 @@ export const RegisterPage = ({ label, placeholder }: SignInPageInterface) => {
             label={'Register'}
             backgroundColor={'#BB261A'}
             color={'#FFFFFF'}
+            onClick={handleRegisterClick}
           />
         </div>
       </div>

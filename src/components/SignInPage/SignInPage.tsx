@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '../Button/Button';
 import { InputTextField } from '../InputTextField/InputTextField';
+import { useNavigate } from 'react-router-dom';
 import './SignInPage.css';
 
 interface SignInPageInterface {
@@ -33,6 +34,14 @@ export const SignInPage = ({ label, placeholder }: SignInPageInterface) => {
     }
   }
 
+  function handleSignInClick() {
+    alert('Signing In');
+  }
+  const navigate = useNavigate();
+  const handleSignUpClick = () => {
+    navigate('register');
+  };
+
   return (
     <div className="container">
       <div className="sign_in-container">
@@ -60,6 +69,7 @@ export const SignInPage = ({ label, placeholder }: SignInPageInterface) => {
               label={'Sign In'}
               backgroundColor={'#BB261A'}
               color={'#FFFFFF'}
+              onClick={handleSignInClick}
             />
           </div>
         </div>
@@ -67,7 +77,6 @@ export const SignInPage = ({ label, placeholder }: SignInPageInterface) => {
           <p className="welcome-note">
             <span>Welcome to</span> Movie OTT
           </p>
-          {/* <img src="./Play-icon.svg" alt="Play" /> */}
           <p className="create-account-note">
             <span>New here?</span> Create an account here.
           </p>
@@ -77,6 +86,7 @@ export const SignInPage = ({ label, placeholder }: SignInPageInterface) => {
               label={'Sign Up'}
               backgroundColor={'#AFB2B9'}
               color={'#1D253A'}
+              onClick={handleSignUpClick}
             />
           </div>
         </div>

@@ -9,10 +9,16 @@ interface SearchBarInterface {
   handleSearchInput?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   className?: string;
+  inputText?: string;
   handleSearchError?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSearchClick?: () => void;
 }
 
-export const SearchBar = ({ placeholder, label }: SearchBarInterface) => {
+export const SearchBar = ({
+  placeholder,
+  label,
+  inputText,
+}: SearchBarInterface) => {
   const [searchInput, setSearchInput] = React.useState('');
 
   function handleSearchInput(event: React.ChangeEvent<HTMLInputElement>) {
@@ -23,6 +29,9 @@ export const SearchBar = ({ placeholder, label }: SearchBarInterface) => {
     ) {
       setSearchInput(event.target.value);
     }
+  }
+  function handleSearchClick() {
+    alert('Searching movies');
   }
 
   return (
@@ -37,7 +46,12 @@ export const SearchBar = ({ placeholder, label }: SearchBarInterface) => {
         />
       </div>
       <div className="search-button-container">
-        <Button className="search-button" label={'Search'} color={'#FFFFFF'} />
+        <Button
+          className="search-button"
+          label={'Search'}
+          color={'#FFFFFF'}
+          onClick={handleSearchClick}
+        />
       </div>
     </div>
   );
